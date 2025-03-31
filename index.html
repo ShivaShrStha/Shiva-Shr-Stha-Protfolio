@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Portfolio</title>
+    <!-- Bootstrap 5.3 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Advanced Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <style>
+    /* Critical above-the-fold styles */
+    .hero-section {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    /* Fallback for non-JS users */
+    .no-js .hero-section {
+        opacity: 1;
+    }
+    </style>
+
+    <noscript>
+        <style>
+        .no-js .hero-section {
+            opacity: 1;
+        }
+        </style>
+    </noscript>
+</head>
+<body class="bg-dark text-light" data-bs-spy="scroll" data-bs-target="#navbar">
+    
+    <!-- Particle.js Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Glass Morphism Navbar -->
+    <nav id="navbar" class="navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold gradient-text" href="#home">PORTFOLIO</a>
+            <button class="navbar-toggler" id="menuToggle" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+            </button>
+        </div>
+        <div class="overlay-menu" id="overlayMenu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Parallax -->
+    <section id="home" class="hero-section vh-100 d-flex align-items-center position-relative overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold mb-4">
+                        <span class="gradient-text typing-text"></span>
+                    </h1>
+                    <p class="lead mb-4" style="color: white;">Crafting digital experiences that inspire and engage</p>
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow hover-3d">View Work</a>
+                        <a href="#footer" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill hover-3d">Contact Me</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span class="scroll-down-arrow"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 section-bg">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-up">
+                    <div class="about-image tilt-hover">
+                        <img src="img/Profile.png" alt="Profile" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title mb-4">About <span class="gradient-text">Me</span></h2>
+                    <div class="about-content">
+                        <p class="lead"> Passionate about web design and development. Currently working with Laravel    and exploring new technologies like Vue.js, React.js, and Angular. 
+                            <span class="highlight-text">What I Do?</span> <span class="highlight-text">What I Did?</span></p>
+                       
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <ul class="about-list">
+                                    <li><span class="fw-bold">Name:</span>Shiva Sharan Shrestha</li>
+                                    <li><span class="fw-bold">Email:</span> shivasharanshrestha20@email.com</li>
+                                    <li><span class="fw-bold">Phone:</span>  +977 9818082311</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="about-list">
+                                    <li><span class="fw-bold">From:</span> Tripureshwor</li>
+                                    <li><span class="fw-bold">Freelance:</span> Available</li>
+                                    <li><span class="fw-bold">Experience:</span> 2+ Years</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="assets/ShivaPDF.pdf" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow hover-3d me-3">Download CV</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill hover-3d">Hire Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container py-5">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">My <span class="gradient-text">Expertise</span></h2>
+            <p class="text-muted">Technologies I build with</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- WordPress Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="bi bi-wordpress fs-3"></i>
+                        </div>
+                        <h4 class="mb-0">WordPress</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>Custom theme development, plugin customization, and performance optimization for content-rich websites.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Theme Development</span>
+                            <span class="tag">WooCommerce</span>
+                            <span class="tag">Headless WP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- YouTube Handler Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="bi bi-youtube fs-3"></i>
+                        </div>
+                        <h4 class="mb-0">YouTube Handler</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>Building custom YouTube API integrations, content management systems, and analytics dashboards.</p>
+                        <div class="skill-tags">
+                            <span class="tag">YouTube API</span>
+                            <span class="tag">Content Management</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Laravel Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="bi bi-server fs-3"></i>
+                        </div>
+                        <h4 class="mb-0">Laravel</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>Robust backend systems, RESTful APIs, and scalable web applications with elegant syntax.</p>
+                        <div class="skill-tags">
+                            <span class="tag">API Development</span>
+                            <span class="tag">Eloquent ORM</span>
+                            <span class="tag">Livewire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- React Card -->
+             
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="fab fa-react fs-3"></i> <!-- Updated icon class -->
+                        </div>
+                        <h4 class="mb-0">React.js</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>Interactive UIs with component-based architecture, state management, and modern hooks.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Hooks</span>
+                            <span class="tag">Context API</span>
+                            <span class="tag">Next.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JavaScript Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="bi bi-code-square fs-3"></i>
+                        </div>
+                        <h4 class="mb-0">JavaScript</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>Modern ES6+ development, asynchronous programming, and cross-browser compatibility.</p>
+                        <div class="skill-tags">
+                            <span class="tag">ES6+</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Full Stack Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-card glass-card p-4 rounded-4 h-100 hover-3d">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="skill-icon me-3">
+                            <i class="bi bi-stack fs-3"></i>
+                        </div>
+                        <h4 class="mb-0">Full Stack</h4>
+                    </div>
+                    <div class="skill-description">
+                        <p>End-to-end web development from database design to pixel-perfect frontend implementation.</p>
+                        <div class="skill-tags">
+                            <span class="tag">System Architecture</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+            <!-- Circular Skills -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="text-center mb-4" data-aos="fade-up">Additional Skills</h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-5">
+                        <div class="skill-circle" data-aos="zoom-in">
+                            <div class="circle-progress" data-value="90">
+                                <svg class="circle-chart" viewBox="0 0 36 36">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-fill" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="circle-text">UI/UX</div>
+                            </div>
+                        </div>
+                        <!-- More circular skills would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 section-bg">
+        <div class="container py-5">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <p class="text-muted" style="color: white;">Some of my recent work</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Project 1 - ThreeSMedia Website -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card rounded-4 overflow-hidden shadow-lg hover-3d">
+                        <div class="project-image">
+                            <img src="img/ThreeSMedia logo.png" alt="ThreeSMedia Website" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h4>ThreeSMedia</h4>
+                                    <p>Modern online articles and news platform</p>
+                                    <div class="project-links">
+                                        <a href="https://threes-media.com/" target="_blank" class="btn btn-sm btn-light rounded-pill me-2">Visit Site</a>
+                                        <a href="https://www.youtube.com/@ThreeSMediaPvtLtd" target="_blank" class="btn btn-sm btn-outline-light rounded-pill">YouTube</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - SSFoundation Nepal -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card rounded-4 overflow-hidden shadow-lg hover-3d">
+                        <div class="project-image">
+                            <img src="img/ssfoundation nepal logo.jpg" alt="SSFoundation Nepal" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h4>SSFoundation Nepal</h4>
+                                    <p>Non-profit organization helping communities</p>
+                                    <div class="project-links">
+                                        <a href="https://ssfoundationnepal.com/" target="_blank" class="btn btn-sm btn-light rounded-pill me-2">Visit Site</a>
+                                        <a href="https://ssfoundationnepal.com/our-works/" class="btn btn-sm btn-outline-light rounded-pill">Our Work</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - ThreeSMedia YouTube -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card rounded-4 overflow-hidden shadow-lg hover-3d">
+                        <div class="project-image">
+                            <img src="img/youtube.png" alt="ThreeSMedia YouTube" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h4>ThreeSMedia YouTube</h4>
+                                    <p>News and multimedia content channel</p>
+                                    <div class="project-links">
+                                        <a href="https://www.youtube.com/@ThreeSMediaPvtLtd" target="_blank" class="btn btn-sm btn-light rounded-pill me-2">View Channel</a>
+                                        <a href="https://threes-media.com/" target="_blank" class="btn btn-sm btn-outline-light rounded-pill">Main Site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project 4 - Dhara Hara Traders -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card rounded-4 overflow-hidden shadow-lg hover-3d">
+                        <div class="project-image">
+                            <img src="img/dharaharatraders.png" alt="Dhara Hara Traders" class="img-fluid">
+                            <div class="project-overlay">
+                                <div class="project-content">
+                                    <h4>Dhara Hara Traders</h4>
+                                    <p>Import/Export eCommerce business</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-sm btn-light rounded-pill me-2">View Products</a>
+                                        <a href="#" class="btn btn-sm btn-outline-light rounded-pill">Contact</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill hover-3d">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Enhanced Footer with Contact Links -->
+<footer id="footer" class="py-5 text-center bg-dark">
+    <div class="container">
+        <div class="footer-logo mb-4">
+            <a href="#" class="gradient-text fw-bold fs-3 text-decoration-none">PORTFOLIO</a>
+        </div>
+        <div class="footer-links mb-4">
+            <a href="#home" class="text-light mx-2">Home</a>
+            <a href="#about" class="text-light mx-2">About</a>
+            <a href="#skills" class="text-light mx-2">Skills</a>
+            <a href="#projects" class="text-light mx-2">Projects</a>
+        </div>
+        
+        <!-- Enhanced Social/Contact Links -->
+        <div class="contact-methods mb-4">
+            <h5 class="text-light mb-3">Connect Directly With Me</h5>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/shiva.sharanshrestha.9" 
+                   class="social-icon hover-3d" 
+                   target="_blank"
+                   aria-label="Facebook"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="Facebook">
+                   <i class="bi bi-facebook"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/shivashr05/" 
+                   class="social-icon hover-3d" 
+                   target="_blank"
+                   aria-label="Instagram"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="Instagram">
+                   <i class="bi bi-instagram"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/ShivaShrStha" 
+                   class="social-icon hover-3d" 
+                   target="_blank"
+                   aria-label="GitHub"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="GitHub">
+                   <i class="bi bi-github"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/9779818082311" 
+                   class="social-icon hover-3d" 
+                   target="_blank"
+                   aria-label="WhatsApp"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="WhatsApp">
+                   <i class="bi bi-whatsapp"></i>
+                </a>
+
+                <!-- Telegram -->
+                <a href="https://t.me/9818082311" 
+                   class="social-icon hover-3d" 
+                   target="_blank"
+                   aria-label="Telegram"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="Telegram">
+                   <i class="bi bi-telegram"></i>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:shivasharanshrestha20@gmail.com" 
+                   class="social-icon hover-3d"
+                   aria-label="Email"
+                   data-bs-toggle="tooltip" 
+                   data-bs-placement="top" 
+                   title="Email">
+                   <i class="bi bi-envelope-fill"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="copyright text-muted">
+            <p class="mb-0">© <span id="year"></span> Shiva Sharan Shrestha. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top hover-3d">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
