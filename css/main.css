@@ -16,6 +16,12 @@ body {
     color: var(--light);
 }
 
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Navbar Base Styles */
 .navbar {
     background: transparent;
@@ -195,6 +201,8 @@ body {
     background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(108, 117, 125, 0.1)), url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg');
     background-size: cover;
     background-position: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .hero-image-wrapper {
@@ -503,6 +511,28 @@ body {
     
     .hero-section h1 {
         font-size: 2.5rem;
+    }
+}
+
+/* Responsive typography */
+h1, h2, h3, p {
+    font-size: calc(1rem + 1vw);
+}
+
+/* Media queries for smaller devices */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 
